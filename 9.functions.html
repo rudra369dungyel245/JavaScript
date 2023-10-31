@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Functions</title>
+    </head>
+    <body>
+        <p id="add"></p>
+        <p id="subtract"></p>
+        <p id="multiply"></p>
+        <p id="divide"></p>
+        <p id="remainder"></p>
+        <script>
+
+            //Normal function
+            function addition(a, b){
+                return a + b;
+            }
+            document.getElementById('add').innerHTML ="10 + 5 = "+ addition(10, 5);
+
+            //Expression function
+            const subtraction = function (a, b){ return a-b};
+            document.getElementById('subtract').innerHTML = "10 - 5 ="+ subtraction(10, 5);
+
+            // Function declared using function constructor
+            const product = new Function ("a", "b", "return a * b");
+            document.getElementById('multiply').innerHTML = "10 * 5 ="+ product(10, 5);
+
+            // self-invoked function
+            (function (a, b) {
+                document.getElementById("divide").innerHTML = "10 / 5 =" + 10/5;
+            })(10, 5);
+
+             // arrow function
+             const remainder = (x, y) => x % y;
+                document.getElementById("remainder").innerHTML = "10 % 5 =" + remainder (10, 5);
+
+        </script>
+     </body>
+</html>

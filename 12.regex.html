@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Regex</title>
+    </head>
+    <body>
+        <div>
+            <p>Please enter username</p>
+            <input id="uname">
+            <button type="button" onclick="validateUsername()">Submit</button>
+
+            <p>Please enter email</p>
+            <input id="email">
+            <button type="button" onclick="validateNumber()">Submit</button>
+            </div> <br>
+
+            <p id="demo"></p>
+
+            <script>
+                function validateUser() {
+                    //declaring regex pattern for validation
+                    const unameRegex = /^[a-zA-Z0-9_-]{3,20}$/;
+                    // Get the value of username
+                    let input = document.getElementById("uname").value;
+                    let result;
+
+                    if (unameRegex.test(input)) {
+                        result = "Your username is: " + input;
+                    } else {
+                        result = "Invalid username! Please enter correct username.";
+                    }
+                    document.getElementById("demo").innerHTML = result;
+                }
+                function validateEmail() {
+                    //declaring regex pattern for validation
+                    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]{2, 4}$/;
+                    // Get the value of email
+                    let input = document.getElementById("email").value;
+                    let result;
+
+                    if (emailRegex.test(input)) {
+                        result = "Your email address is: "+ input;
+                    } else {
+                        result = "Invalid email! Please enter correct email.";
+                    }
+                    document.getElementById("demo").innerHTML = result;
+                }
+
+                function validateNumber() {
+                    //declaring regex pattern for validation
+                    const numRegex = /^-?\d+$/;
+                    // get the value of fav number
+                    let input = document.getElementById("num").value;
+                    let result;
+                }
+            </script>
+        </div>
+    </body>
+</html>

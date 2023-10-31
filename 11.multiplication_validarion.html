@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multiplication</title>
+    </head>
+    <body>
+        <h5>Multiplication</h5>
+        <div>
+            <p>Please input number greater than 1:</p>
+            <input id="num1">
+            <p>Please input another number greater than 1:</p>
+            <input id="num2">
+        </div> <br>
+
+        <button type="button" onclick="multiply()">Submit</button>
+        <p id="demo"></p>
+
+        <script>
+            function multiply() {
+                // get the value of the first input field with id="num1"
+                let x = document.getElementById("num1").value;
+                // Get the value of the first input field with id="num1"
+                let y = document.getElementById("num2").value;
+                let result;
+                
+                if (isNaN(x) || x < 1) {
+                    result = "First Input not valid";
+                } else if (isNaN(y) || y < 1) {
+                    result = "Second Input not valid";
+                } else {
+                    let product = x * y;
+                    result = x + " * " + y + " = " + product;
+                }
+                document.getElementById("demo").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display properties</title>
+</head>
+<body>
+    <!--use innerHTML property is mostly used-->
+    <p id="demo"></p>
+    <script>
+        document.getElementById('demo').innerHTML = "JavaScript";
+    </script>
+
+    <!--using document.write() method-->
+    <script>
+        document.write('<h3>Autumn</h3>');
+        document.write('Its getting cold');
+    </script>
+
+    <button type="button" onclick="document.write('Boom')">Click Me</button>
+    
+    <!--window.alert() method-->
+    <!-- <script>
+        alert('This is an alert box!')
+    </script> -->
+
+    <button type="button" onclick="alert('This is another alert')">Display Alert</button>
+
+    <!--console.log() methodn -->
+    <script>
+    console.log('I am a log message')
+    </script>
+</body>
+</html>
